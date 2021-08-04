@@ -20,7 +20,7 @@ let posterrrrr;
 
 function preload() {
   img = loadImage('data/menfrog.jpg');
-  blurb = loadImage('data/thisistayla.png');
+  blurb = loadImage('data/taylarogicis.png');
   poster = loadImage('data/taymadeit.png');
   posterr = loadImage('data/taymadeit2.png');
   posterrr = loadImage('data/poster3.png');
