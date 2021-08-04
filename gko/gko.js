@@ -28,7 +28,7 @@ function preload() {
   posterrrrr = loadImage('data/poster5.png');
 }
 
-let look = 'Look! Tayla Made It.';
+let look = 'This is Tayla Made.';
 let hello = 'Hello World.';
 
 let x1 = 0;
