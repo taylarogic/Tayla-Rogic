@@ -29,7 +29,6 @@ function preload() {
   posterrr = loadImage('data/poster3.png');
   posterrrr = loadImage('data/poster4.png');
   posterrrrr = loadImage('data/poster5.png');
-  animation = load
 }
 
 let look = 'This is Tayla Made.';
@@ -39,7 +38,7 @@ let x1 = 0;
 let x2 = 1500;
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(windowWidth, windowHeight);
   vid = createVideo("thing0001-0100.mp4");
   vid.size(400, 400);
   vid.volume(0);
