@@ -1,3 +1,6 @@
+let vid;
+let playing = true;
+
 let circles;
 
 let type
@@ -11,7 +14,7 @@ function makeTypespin() {
   return thisSpin;
 }
 
-let img;
+let me;
 let blurb;
 let poster;
 let posterr;
@@ -20,7 +23,7 @@ let posterrrr;
 let posterrrrr;
 
 function preload() {
-  img = loadImage('data/menfrog.jpg');
+  me = loadImage('data/menfrog.jpg');
   blurb = loadImage('data/taylarogicis.png');
   poster = loadImage('data/taymadeit.png');
   posterr = loadImage('data/taymadeit2.png');
@@ -40,12 +43,18 @@ function setup() {
   background(225);
   smooth();
   textAlign(CENTER);
+  
+  vid = createVideo("iwaswrong.mp4");
+  vid.size(400, 400);
+  vid.volume(0);
+  vid.loop();
+  vid.hide();
 
   circles = [
     makeCircle({
-      radius: 40,
+      radius: 60,
       increment: -4,
-      string: ':)',
+      string: 'welcome',
       color: color('blue'),
       center: {
         x: 80,
@@ -78,6 +87,10 @@ const bouncer = () => {
 
 function draw() {
   background(225);
+  
+  let img = vid.get();
+  image(img, 0, 0);
+  
   imageMode(CENTER);
   image(poster, 450+sin (frameCount*0.05)*100,
   300+cos(frameCount*0.06)*100);
@@ -94,7 +107,7 @@ function draw() {
     image(blurb, mouseX, mouseY)
   }
   else {
-  image(img, mouseX, mouseY, 170,200);
+  image(me, mouseX, mouseY, 170,200);
   }
   textAlign(CENTER);
   for (let i = 0; i < typespin.length; i++) {
