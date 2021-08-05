@@ -1,0 +1,14 @@
+body {
+	background-color: #e1e1e1;
+	color: #00f;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
