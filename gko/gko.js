@@ -36,7 +36,6 @@ let x2 = 1500;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  canvas.parent('sketch-container');
   background(225);
   smooth();
   textAlign(CENTER);
