@@ -54,7 +54,7 @@ function setup() {
     makeCircle({
       radius: 80,
       increment: -4,
-      string: 'welcome',
+      string: 'we lcome',
       color: color('blue'),
       center: {
         x: 80,
