@@ -1,5 +1,3 @@
-let vid;
-let playing = true;
 
 let circles;
 
@@ -43,12 +41,6 @@ function setup() {
   background(225);
   smooth();
   textAlign(CENTER);
-  
-  vid = createVideo("thing0001-0100.mp4");
-  vid.size(400, 400);
-  vid.volume(0);
-  vid.loop();
-  vid.hide();
 
   circles = [
     makeCircle({
@@ -87,9 +79,6 @@ const bouncer = () => {
 
 function draw() {
   background(225);
-  
-  let img = vid.get();
-  image(img, 0, 0);
   
   imageMode(CENTER);
   image(poster, 450+sin (frameCount*0.05)*100,
