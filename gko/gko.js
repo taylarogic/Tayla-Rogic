@@ -3,6 +3,9 @@ let circles;
 let type
 let typespin = [];
 
+let vid;
+let playing = true;
+
 function makeTypespin() {
   let thisSpin = {x: mouseX,
                   y: mouseY,
@@ -26,6 +29,7 @@ function preload() {
   posterrr = loadImage('data/poster3.png');
   posterrrr = loadImage('data/poster4.png');
   posterrrrr = loadImage('data/poster5.png');
+  animation = load
 }
 
 let look = 'This is Tayla Made.';
@@ -36,6 +40,11 @@ let x2 = 1500;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  vid = createVideo("iwaswrong.mp4");
+  vid.size(400, 400);
+  vid.volume(0);
+  vid.loop();
+  vid.hide();
   background(225);
   smooth();
   textAlign(CENTER);
@@ -77,6 +86,9 @@ const bouncer = () => {
 
 function draw() {
   background(225);
+   background(220);
+  let img = vid.get();
+  image(img, 0, 0);
   imageMode(CENTER);
   image(poster, 450+sin (frameCount*0.05)*100,
   300+cos(frameCount*0.06)*100);
