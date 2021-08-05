@@ -1,3 +1,5 @@
+let a = createA('https://www.taylarogic.com/', 'My Work');
+a.position(0, 0);
 
 let circles;
 
