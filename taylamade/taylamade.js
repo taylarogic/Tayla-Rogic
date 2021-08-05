@@ -1,7 +1,9 @@
+
 let circles;
 
 let type
 let typespin = [];
+
 
 function makeTypespin() {
   let thisSpin = {x: mouseX,
@@ -10,7 +12,7 @@ function makeTypespin() {
   return thisSpin;
 }
 
-let img;
+let me;
 let blurb;
 let poster;
 let posterr;
@@ -19,42 +21,40 @@ let posterrrr;
 let posterrrrr;
 
 function preload() {
-  img = loadImage('data/menfrog.jpg');
-  blurb = loadImage('data/thisistayla.png');
+  me = loadImage('data/menfrog.jpg');
+  blurb = loadImage('data/taylarogicis.png');
   poster = loadImage('data/taymadeit.png');
   posterr = loadImage('data/taymadeit2.png');
+  posterrr = loadImage('data/poster3.png');
   posterrrr = loadImage('data/poster4.png');
   posterrrrr = loadImage('data/poster5.png');
-  flower = loadImage('data/aflower.png');
-  squares = loadImage('data/squarez.png');
-  
 }
 
 let look = 'This is Tayla Made.';
-let hello = 'This is not a website.';
+let hello = 'Hello World.';
 
 let x1 = 0;
 let x2 = 1500;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(255);
+  background(225);
   smooth();
   textAlign(CENTER);
 
- circles = [
-   makeCircle({
-   radius: 40,
-   increment: -4,
-   string: 'hello',
-   color: color('blue'),
-   center: {
-   x: 80,
-   y: 80
-  },
-  modifier: bouncer()
-  })
- ]
+  circles = [
+    makeCircle({
+      radius: 80,
+      increment: -4,
+      string: 'we lcom e',
+      color: color('blue'),
+      center: {
+        x: 80,
+        y: 80
+      },
+      modifier: bouncer()
+    })
+  ]
 }
 
 const bouncer = () => {
@@ -78,27 +78,25 @@ const bouncer = () => {
 }
 
 function draw() {
-  background(250);
+  background(225);
+  
   imageMode(CENTER);
-   image(flower, 300+sin (frameCount*0.04)*100,
-  300+sin(frameCount*0.05)*100);
-  image(squares, 980+sin (frameCount*0.04)*100,
-  650+sin(frameCount*0.05)*100);
   image(poster, 450+sin (frameCount*0.05)*100,
   300+cos(frameCount*0.06)*100);
-  image(posterrrrr, 550+sin (frameCount*0.05)*100,
+  image(posterrrrr, 450+sin (frameCount*0.05)*100,
   600+cos(frameCount*0.04)*100);
   image(posterr, 1000+sin(frameCount*0.05)*100,
   350+cos(frameCount*0.05)*100);
-  image(posterrrr, 850+sin (frameCount*0.05)*100,
+  image(posterrr, 750+sin (frameCount*0.05)*100,
   450+sin(frameCount*0.05)*100);
- 
+  image(posterrrr, 980+sin (frameCount*0.05)*130,
+  600+cos(frameCount*0.05)*100);
  
   if (mouseIsPressed) {
     image(blurb, mouseX, mouseY)
   }
   else {
-  image(img, mouseX, mouseY, 170,200);
+  image(me, mouseX, mouseY, 170,200);
   }
   textAlign(CENTER);
   for (let i = 0; i < typespin.length; i++) {
@@ -113,9 +111,10 @@ function draw() {
     stroke(0);
     strokeWeight(3);
     fill(0);
-    text("@TAYLAROGICDESIGN", 0, 0);
+    text("TAYLA ROGIC", 0, 0);
     pop();
   }
+  //image(posters, 500,300);
   textSize(80);
   stroke(0,0,255);
   strokeWeight(3);
@@ -134,6 +133,7 @@ function draw() {
   if( x2 < -textWidth(hello) ){
    x2 = 1500; 
   }
+  textSize(50);
   circles.forEach(c => c.update())
 }
 const makeCircle = ({
@@ -180,7 +180,7 @@ const makeCircle = ({
 
   return circle
 }
-  
+
 function mousePressed() {
 typespin.push(makeTypespin());
 }
