@@ -39,7 +39,7 @@ let x1 = 0;
 let x2 = 1500;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, 1000);
   vid = createVideo("thing0001-0100.mp4");
   vid.size(400, 400);
   vid.volume(0);
