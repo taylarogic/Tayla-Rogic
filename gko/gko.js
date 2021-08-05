@@ -44,7 +44,7 @@ function setup() {
   smooth();
   textAlign(CENTER);
   
-  vid = createVideo("iwaswrong.mp4");
+  vid = createVideo("thing0001-0100.mp4");
   vid.size(400, 400);
   vid.volume(0);
   vid.loop();
@@ -52,7 +52,7 @@ function setup() {
 
   circles = [
     makeCircle({
-      radius: 60,
+      radius: 80,
       increment: -4,
       string: 'welcome',
       color: color('blue'),
